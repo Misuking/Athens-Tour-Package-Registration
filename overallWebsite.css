@@ -1,198 +1,235 @@
-/* Import Google Fonts */
+/* ==================================
+   IMPORT GOOGLE FONTS
+================================== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
-
-
-.content {
-    margin-left: 110px; 
-    padding: 20px;
-    color: #fdde6cff;
+/* ==================================
+   RESET & BASE STYLES
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Pianorevised.gif);
-    background-size: cover; /* Make the background image cover the entire page */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Keep the background fixed during scrolling */
-    background-position: center; /* Center the background image */
+html, body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('breathtaking-views-over-athens.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
 }
-body {
-    font-family: 'Century Gothic', Arial, sans-serif;
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* Ensure it covers the full viewport height */
-    color: white; /* Adjust text color for better visibility on the darkened background */
+
+/* ==================================
+   SIDEBAR (BLUE COLOR SCHEME & BIGGER ROMAN NUMERALS)
+================================== */
+.sidebar {
+    width: 160px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #1E3A8A, #3B82F6); /* Dark to light blue */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
-div.bkgrd {
-    background-color: white;
-    padding-left: 75px;
-    padding-right: 75px;
-    margin: 20px;
-    color: #5e5527;
-    opacity: 0.8;
+.sidebar h2 {
+    font-size: 24px;
+    color: #E0F2FE;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
 
-}
-h1, a:visited {
-    text-align: center; 
-    color: white;
-}
-/* Center all headers */
-h2, h3, h4, h5, h6 {
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
     text-align: center;
-    color: #5e5527;
 }
 
-hr {
-    border: 1px solid white;
-    margin: 10px 0;
+.sidebar ul li {
+    margin: 15px 0;
 }
 
-/* Section Styles */
-main {
-    padding: 20px;
-    flex: 1; /* Ensure the main content takes up available space */
+.sidebar ul li a {
+    display: block;
+    font-size: 28px; /* Increased by 170% */
+    color: #E0F2FE; /* Light blue */
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
 }
 
-p {
+.sidebar ul li a:hover {
+    background: #60A5FA; /* Brighter blue hover effect */
+    color: #1E3A8A; /* Dark blue text */
+    border-radius: 8px;
+}
+
+/* ==================================
+   MAIN CONTENT
+================================== */
+.content {
+    margin-left: 160px; /* Adjusted for sidebar width */
+    padding: 40px;
+    width: calc(100% - 160px); /* Ensures proper full-width layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==================================
+   HEADER SECTION (FANCY PADDING & ELEVATED DESIGN)
+================================== */
+header {
+    background: rgba(255, 255, 255, 0.15); /* Light translucent effect */
+    padding: 50px; /* Increased padding for a grand feel */
+    text-align: center;
+    border-radius: 12px; /* Smooth edges */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Elegant shadow effect */
+    margin: 30px auto; /* Space around the section */
+    width: 90%;
+    max-width: 1000px; /* Ensures readability without being too wide */
+    backdrop-filter: blur(5px); /* Subtle glass effect */
+}
+
+/* Styling for the main heading */
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #87a5ff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
 }
 
-/* List Styles */
-ul {
-    list-style-type: none; /* Remove default bullets */
-    padding-left: 0; /* Remove default list padding */
+/* Styling for the paragraph below the heading */
+header p {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+/* ==================================
+   SECTION CONTAINERS (WIDER PADDING FOR LEFT & RIGHT EXPANSION)
+================================== */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.9);
+    color: rgb(86, 131, 255);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 130%; /* Increased width for more left & right expansion */
+    max-width: 1100px; /* Allows more stretch while keeping content readable */
+    margin: 20px auto;
+}
+
+/* ==================================
+   OUR TOURS (NO BULLETS)
+================================== */
+.bkgrd ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
     text-align: center;
 }
 
-ul li {
-    display: inline-block;
-    margin: 0 10px; /* Space between items */
-    position: relative;
-    color: white;
+.bkgrd ul li {
+    font-size: 18px;
+    margin: 10px 0;
 }
-
-/* Add square bullet before each link 
-ul li::before {
-    content: '\25A0'; /* Unicode for square 
-    color: #FFD700; /* Golden bullet 
-    font-size: 0.8em; /* Adjust bullet size 
-    margin-right: 8px; /* Space between bullet and text */
-}
-
-/* Add gradient to links */
-ul li a {
-    color: transparent; /* Set text color to transparent for gradient */
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(to right, #FFD700, #FFFFE0); /* Gradient from dark gold to light gold */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    background-clip: text; /* Standard background clip */
-}
-
-/* Add shadow directly behind text shape */
-ul li a::before {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* ==================================
+   GALLERY SECTION (STRICT 2x2 GRID, CENTERED, ROUNDED IMAGES)
+================================== */
+#gallery {
     width: 100%;
-    height: 100%;
-    filter: blur(6px); /* Larger blur radius for noticeable shadow */
-    background: none;
-    -webkit-background-clip: text;
-    background-clip: text;
+    text-align: center;
+    padding: 20px 0;
 }
 
-ul li a:hover {
-    color:#FFFFE0;
-    text-decoration: underline; /* Underline on hover */
+/* Gallery container enforcing strict 2x2 layout */
+#gallery .bkgrd {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Forces exactly 2 columns */
+    grid-template-rows: 1fr 1fr; /* Forces exactly 2 rows */
+    gap: 20px; /* Ensures proper spacing */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ensures proper size for a neat layout */
+    margin: 0 auto; /* Centers the gallery */
+    padding: 25px;
 }
 
-ol {
-    list-style-type: upper-roman;
-    padding-left: 20px;
+/* Ensures all images are the same size, centered, and rounded */
+#gallery .bkgrd img {
+    width: 100%; /* Ensures responsiveness */
+    max-width: 280px; /* Keeps images uniform */
+    height: 280px; /* Fixed height for perfect squares */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 20px; /* Smooth rounded edges */
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Image Styles */
-img {
-    float: left;
-    margin: 0 15px 15px 0; /* Add space to the right and below images for gap */
-    width: 30%; /* Resizing image to 0.3x original size */
-    height: auto;
-    border: 5px solid white; /* Add white border */
-    box-shadow: 0 4px 48px rgba(0, 0, 0, 0.9); /* Increase blur radius and darken shadow opacity */
+/* Ensures the gallery itself remains centered */
+#gallery .bkgrd {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
-img:first-of-type {
-    filter: brightness(1.8); /* Make the first image 1.8x brighter */
+/* Hover effect */
+#gallery .bkgrd img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 
-img:last-of-type {
-    filter: brightness(1.3); /* Make the second image 1.3x brighter */
-}
 
-div.gallery{
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 245px;
 
-}
 
-/* Footer Styles */
+
+
+/* ==================================
+   FOOTER (FIXED AT BOTTOM)
+================================== */
 footer {
     text-align: center;
-    background-color: black;
-    padding: 10px 0;
+    background: black;
     color: white;
-    margin-top: auto; /* Push footer to the bottom */
-}
-
-
-/* other project that can be changed to our liking ^^^ */
-
-/* relative to project itself vvv */
-
-.sidebar {
-    height: 100%; /* Full height */
-    width: 100px; /* Sidebar width */
-    position: fixed; /* Fixed position */
-    top: 0;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     left: 0;
-    background-color: #003FCD; /* Dark background */
-    padding-top: 20px;
 }
-.nav h2 {
-    color: #FFD200;
+
+/* for  content of the webpage*/
+
+/* page 5-7 css */
+
+.boxedInformation {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    margin: auto;
     text-align: center;
-    margin-bottom: 20px;
-}
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-    color: #FFD200;
-
-}
-.nav ul li {
-    text-align: center;
-    color: #FFD200;
-    margin: 20px 0;
 }
 
-.nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
-    color: #FFD200;
-
+.contentPadding {
+    padding-left: 130px;
 }
 
-.nav ul li a:hover {
-    background-color: #575757;
-    color: #f5f5dcff;
-
+.pColoredText > p , h1 , label {
+    color: #003FCD;
 }
