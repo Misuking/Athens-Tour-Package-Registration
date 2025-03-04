@@ -1,0 +1,245 @@
+/* ==================================
+   IMPORT GOOGLE FONTS
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* ==================================
+   RESET & BASE STYLES
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('breathtaking-views-over-athens.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ==================================
+   SIDEBAR (BLUE COLOR SCHEME & BIGGER ROMAN NUMERALS)
+================================== */
+.sidebar {
+    width: 160px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #1E3A8A, #3B82F6); /* Dark to light blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.nav h2 {
+    font-size: 24px;
+    color: #E0F2FE;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav ul li {
+    margin: 15px 0;
+}
+
+.nav ul li a {
+    display: block;
+    font-size: 28px; /* Increased by 170% */
+    color: #E0F2FE; /* Light blue */
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+    background: #60A5FA; /* Brighter blue hover effect */
+    color: #1E3A8A; /* Dark blue text */
+    border-radius: 8px;
+}
+
+#pageid {
+    padding: 20px;
+    /*height: 100%;*/
+    
+    margin-bottom: 50%;
+    bottom:10px;   
+    position: absolute;
+    color: #1E3A8A;
+}
+
+/* ==================================
+   MAIN CONTENT
+================================== */
+.content {
+    margin-left: 160px; /* Adjusted for sidebar width */
+    padding: 40px;
+    width: calc(100% - 160px); /* Ensures proper full-width layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==================================
+   HEADER SECTION (FANCY PADDING & ELEVATED DESIGN)
+================================== */
+header {
+    background: rgba(255, 255, 255, 0.15); /* Light translucent effect */
+    padding: 50px; /* Increased padding for a grand feel */
+    text-align: center;
+    border-radius: 12px; /* Smooth edges */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Elegant shadow effect */
+    margin: 30px auto; /* Space around the section */
+    width: 90%;
+    max-width: 1000px; /* Ensures readability without being too wide */
+    backdrop-filter: blur(5px); /* Subtle glass effect */
+}
+
+/* Styling for the main heading */
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #87a5ff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+/* Styling for the paragraph below the heading */
+header p {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+/* ==================================
+   SECTION CONTAINERS (WIDER PADDING FOR LEFT & RIGHT EXPANSION)
+================================== */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.9);
+    color: rgb(86, 131, 255);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 130%; /* Increased width for more left & right expansion */
+    max-width: 1100px; /* Allows more stretch while keeping content readable */
+    margin: 20px auto;
+}
+
+/* ==================================
+   OUR TOURS (NO BULLETS)
+================================== */
+.bkgrd ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    text-align: center;
+}
+
+.bkgrd ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+/* ==================================
+   GALLERY SECTION (STRICT 2x2 GRID, CENTERED, ROUNDED IMAGES)
+================================== */
+#gallery {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Gallery container enforcing strict 2x2 layout */
+#gallery .bkgrd {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Forces exactly 2 columns */
+    grid-template-rows: 1fr 1fr; /* Forces exactly 2 rows */
+    gap: 20px; /* Ensures proper spacing */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ensures proper size for a neat layout */
+    margin: 0 auto; /* Centers the gallery */
+    padding: 25px;
+}
+
+/* Ensures all images are the same size, centered, and rounded */
+#gallery .bkgrd img {
+    width: 100%; /* Ensures responsiveness */
+    max-width: 280px; /* Keeps images uniform */
+    height: 280px; /* Fixed height for perfect squares */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 20px; /* Smooth rounded edges */
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensures the gallery itself remains centered */
+#gallery .bkgrd {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect */
+#gallery .bkgrd img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+/* ==================================
+   FOOTER (FIXED AT BOTTOM)
+================================== */
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* for  content of the webpage*/
+
+/* page 5-7 css */
+
+.boxedInformation {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    margin: auto;
+    text-align: center;
+}
+
+.contentPadding {
+    padding-left: 130px;
+}
+
+.pColoredText > p , h1 , label {
+    color: #003FCD;
+}
