@@ -1,72 +1,101 @@
 <!--regristration and booking-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title> Forum</title>
-	<link rel="stylesheet" href="overallWebsite.css">
+    <meta charset="utf-8">
+    <title> Forum</title>
+    <link rel="stylesheet" href="overallWebsite.css">
     <link rel="icon" href="./images/circle-flags--gr.svg">
     <style>
         body {
-            background-image:  url('./images/athensview3.jpeg');
+            background-image: url('./images/athensview3.jpeg');
             background-size: cover;
             z-index: -2;
         }
     </style>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544;</a></li>
-            <li><a href="page-2.html">&#8545;</a></li>
-            <li><a href="page-3.html">&#8546;</a></li>
-            <li><a href="page-4.html">&#8547;</a></li>
-            <li><a href="page-5.html">&#8548;</a></li>
-            <li><a href="page-6.html">&#8549;</a></li>
-            <li><a href="page-7.html">&#8550;</a></li>
-        </ul>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544;</a></li>
+                <li><a href="page-2.html">&#8545;</a></li>
+                <li><a href="page-3.html">&#8546;</a></li>
+                <li><a href="page-4.html">&#8547;</a></li>
+                <li><a href="page-5.html">&#8548;</a></li>
+                <li><a href="page-6.html">&#8549;</a></li>
+                <li><a href="page-7.html">&#8550;</a></li>
+            </ul>
         </div>
-    <div id="pageid">
-        <p>&#8550;</p>
+        <div id="pageid">
+            <p>&#8550;</p>
+        </div>
     </div>
-    </div>
-    <div class="contentPadding boxedInformation pColoredText">
-        <h1>
-            Tour Package Registration 
-        </h1>
+    <div class="content">
 
-        <form action="/action_page.php">
-            <!--first and last name-->
-            <label for="firstName"> <b> Please enter your first name : </b> </label>
-            <input type="text" name="firstName" id="firstName">
-            <br> <br>
-            <label for="lastName"> <b> Please enter your last name : </b> </label>
-            <input type="text" name="lastName" id="lastName">
-            <br> <br>
-            <!--checkbox -->
-            <input type="checkbox" id="option1" name="option1" value="Bike">
-            <label for="option1"> <b> Flight </b> </label><br>
-            <input type="checkbox" id="option2" name="option2" value="Car">
-            <label for="option2"> <b> Meals </b> </label><br>
-            <input type="checkbox" id="option3" name="option3" value="Boat">
-            <label for="option3"> <b> Suite </b></label> <br>
-            <input type="checkbox" id="option4" name="option4" value="Bus">
-            <label for="option4"> <b> Pool </b></label> <br>
-            <input type="checkbox" id="option5" name="option5" value="2003NissanMurado">
-            <label for="option5"> <b> Pet Room </b></label> <br>
-            <br> <br>
-            <!--dropdown of people-->
-            <select id="numPeople" name="numPeople">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            <br> <br>
-            <input type="submit" value="Process Request">
-        </form>
+        <main>
+            <section id="about">
+                <div class="bkgrd">
+                    <h2> Registration Fourm</h2>
+                    <p>
+                    </p>
+                    <form action="">
+                        <br>
+                        <label for="firstName"> <b> Please enter your first name : </b> </label>
+                        <input type="text" name="firstName" id="firstName">
+                        <br> <br>
+                        <label for="lastName"> <b> Please enter your last name : </b> </label>
+                        <input type="text" name="lastName" id="lastName">
+                        <br> <br>
+
+                        <input type="checkbox" id="option1" name="option1" value="Bike">
+                        <label for="option1"> <b> Flight </b> </label><br>
+                        <input type="checkbox" id="option2" name="option2" value="Car">
+                        <label for="option2"> <b> Meals </b> </label><br>
+                        <input type="checkbox" id="option3" name="option3" value="Boat">
+                        <label for="option3"> <b> Suite </b></label> <br>
+                        <input type="checkbox" id="option4" name="option4" value="Bus">
+                        <label for="option4"> <b> Pool </b></label> <br>
+                        <input type="checkbox" id="option5" name="option5" value="2003NissanMurado">
+                        <label for="option5"> <b> Pet Room </b></label> <br>
+                        <br> <br>
+                        <label for="numPeople"> Please enter the amount of people who want to attend : </label>
+                        <select id="numPeople" name="numPeople">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br> <br>
+                        <label for="packageType"> Please enter the type of package you would like to have : </label>
+                        <select id="packageType" name="packageType">
+                            <option value="packageA" selected> packageA </option>
+                            <option value="packageB"> packageB </option>
+                            <option value="packageC"> packageC </option>
+                            <option value="packageD"> packageD </option>
+                        </select>
+                        <br> <br>
+                        <p> Include Airline Travel : </p>
+                        <input type="radio" id="airlineTravel" name="Y">
+                        <label for="Y"> Yes </label>
+                        <input type="radio" id="airlineTravel" name="N">
+                        <label for="N"> No </label>
+                        <br><br>
+                        <input type="submit" value="Process Request">
+                    </form>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
+        </footer>
     </div>
 </body>
+
 </html>
