@@ -73,11 +73,11 @@ ul li {
     color: white;
 }
 
-/* Add square bullet before each link */
+/* Add square bullet before each link 
 ul li::before {
-    content: '\25A0'; /* Unicode for square */
-    color: #FFD700; /* Golden bullet */
-    font-size: 0.8em; /* Adjust bullet size */
+    content: '\25A0'; /* Unicode for square 
+    color: #FFD700; /* Golden bullet 
+    font-size: 0.8em; /* Adjust bullet size 
     margin-right: 8px; /* Space between bullet and text */
 }
 
@@ -94,14 +94,11 @@ ul li a {
 
 /* Add shadow directly behind text shape */
 ul li a::before {
-    content: attr(href); /* Mimic the text of the link */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: rgba(0, 0, 0, 0.7); /* Shadow color */
-    z-index: -1; /* Place shadow behind text */
     filter: blur(6px); /* Larger blur radius for noticeable shadow */
     background: none;
     -webkit-background-clip: text;
@@ -164,39 +161,38 @@ footer {
     position: fixed; /* Fixed position */
     top: 0;
     left: 0;
-    background-color: #f7eaa1; /* Dark background */
+    background-color: #003FCD; /* Dark background */
     padding-top: 20px;
 }
-.sidebar h2 {
-    color: #f5f5dcff;
+.nav h2 {
+    color: #FFD200;
     text-align: center;
     margin-bottom: 20px;
 }
-.sidebar ul {
+.nav ul {
     list-style-type: none;
     padding: 0;
-    color: #f5f5dcff;
+    color: #FFD200;
 
 }
-.sidebar ul li {
+.nav ul li {
     text-align: center;
-    color: #f5f5dcff;
+    color: #FFD200;
     margin: 20px 0;
 }
 
-.sidebar ul li a {
+.nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     display: block;
     padding: 10px;
-    color: #f5f5dcff;
+    color: #FFD200;
 
 }
 
-.sidebar ul li a:hover {
+.nav ul li a:hover {
     background-color: #575757;
     color: #f5f5dcff;
 
 }
-
