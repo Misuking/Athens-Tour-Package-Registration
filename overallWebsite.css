@@ -205,10 +205,6 @@ header p {
 }
 
 
-
-
-
-
 /* ==================================
    FOOTER (FIXED AT BOTTOM)
 ================================== */
@@ -241,5 +237,5 @@ footer {
 }
 
 .pColoredText > p , h1 , label {
-    color: #003FCD;
+    color: rgb(86, 131, 255);
 }
