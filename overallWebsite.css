@@ -79,7 +79,7 @@ ul li::before {
     color: #FFD700; /* Golden bullet 
     font-size: 0.8em; /* Adjust bullet size 
     margin-right: 8px; /* Space between bullet and text */
-}
+
 
 /* Add gradient to links */
 ul li a {
@@ -164,24 +164,24 @@ footer {
     background-color: #003FCD; /* Dark background */
     padding-top: 20px;
 }
-.sidebar h2 {
+.nav h2 {
     color: #FFD200;
     text-align: center;
     margin-bottom: 20px;
 }
-.sidebar ul {
+.nav ul {
     list-style-type: none;
     padding: 0;
     color: #FFD200;
 
 }
-.sidebar ul li {
+.nav ul li {
     text-align: center;
     color: #FFD200;
     margin: 20px 0;
 }
 
-.sidebar ul li a {
+.nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -191,9 +191,8 @@ footer {
 
 }
 
-.sidebar ul li a:hover {
+.nav ul li a:hover {
     background-color: #575757;
     color: #f5f5dcff;
 
 }
-
