@@ -1,39 +1,106 @@
-<!--about us page!!-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title> PAGENAMEHERE </title>
-	<link rel="stylesheet" href="overallWebsite.css">
-    <link rel="icon" href="./images/circle-flags--gr.svg">
-    <style>
-        body {
-            background-image:  url('./images/stadium-night.jpg');
-            background-size: cover;
-            z-index: -2;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Tour Packages</title>
+    <link rel="stylesheet" href="overallWebsite.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Sidebar Navigation (Consistent Across Pages) -->
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544;</a></li>
-            <li><a href="page-2.html">&#8545;</a></li>
-            <li><a href="page-3.html">&#8546;</a></li>
-            <li><a href="page-4.html">&#8547;</a></li>
-            <li><a href="page-5.html">&#8548;</a></li>
-            <li><a href="page-6.html">&#8549;</a></li>
-        </ul>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544;</a></li>
+                <li><a href="page-2.html" class="active">&#8545;</a></li> <!-- Highlight current page -->
+                <li><a href="page-3.html">&#8546;</a></li>
+                <li><a href="page-4.html">&#8547;</a></li>
+                <li><a href="page-5.html">&#8548;</a></li>
+                <li><a href="page-6.html">&#8549;</a></li>
+                
+            </ul>
+        </div>
+        <div id="pageid">
+            <p>&#8545;</p> <!-- Roman numeral indicator for Page 2 -->
+        </div>
     </div>
-    <div id="pageid">
-        <p>&#8545;</p>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>Athens Tour Packages</h1>
+            <p>Discover Athens like never before with our curated selection of immersive tours.</p>
+        </header>
+
+        <main>
+            <section id="packages">
+                
+                <!-- Tour 1 -->
+                <div class="bkgrd">
+                    <h2>Acropolis & Parthenon Tour</h2>
+                    <img src="./images/acropolis.jpeg" alt="Acropolis Tour" class="tour-img">
+                    <p class="price">$85 per person</p>
+                    <p class="description">
+                        Explore the most iconic landmark of Athens, the Acropolis, and its crown jewel, the Parthenon.
+                        This guided tour will take you through centuries of history, art, and mythology, offering deep insights
+                        into ancient Greek civilization. Learn about the architectural marvels, the legendary stories behind 
+                        the ruins, and experience breathtaking panoramic views of the city.
+                    </p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="bkgrd">
+                    <h2>Ancient Agora Walk</h2>
+                    <img src="./images/ancient-agora.jpg" alt="Ancient Agora Tour" class="tour-img">
+                    <p class="price">$60 per person</p>
+                    <p class="description">
+                        Step into the birthplace of democracy as you explore the Ancient Agora of Athens.
+                        Walk along the paths once traveled by great philosophers like Socrates and Aristotle, 
+                        and admire the well-preserved Temple of Hephaestus. This tour provides a deep dive into 
+                        the daily life of Athenians in antiquity, with fascinating stories about commerce, politics, and culture.
+                    </p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="bkgrd">
+                    <h2>Athens by Night</h2>
+                    <img src="./images/athens-night.jpg" alt="Athens by Night" class="tour-img">
+                    <p class="price">$100 per person</p>
+                    <p class="description">
+                        Experience the magic of Athens after sunset on this mesmerizing night tour.
+                        Stroll through beautifully illuminated streets, enjoy stunning views of ancient ruins glowing 
+                        in the night, and indulge in authentic Greek cuisine at a traditional taverna. With live music 
+                        and cultural performances, this tour offers a perfect blend of history, gastronomy, and entertainment.
+                    </p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+                <!-- Tour 4 -->
+                <div class="bkgrd">
+                    <h2>Greek Mythology Experience</h2>
+                    <img src="./images/mythology-tour.jpg" alt="Greek Mythology Experience" class="tour-img">
+                    <p class="price">$75 per person</p>
+                    <p class="description">
+                        Immerse yourself in the world of gods and heroes with this fascinating mythology-themed tour.
+                        Visit legendary sites like the Temple of Olympian Zeus and learn about the myths of Athena, 
+                        Poseidon, and the powerful Olympian gods. Through captivating storytelling and historical insights, 
+                        this tour will bring Greek mythology to life right before your eyes.
+                    </p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
+        </footer>
     </div>
-    </div>
-  
-    <footer>
-        <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
-    </footer>
+
 </body>
 </html>
