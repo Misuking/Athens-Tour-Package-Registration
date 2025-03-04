@@ -38,25 +38,25 @@ html, body {
     padding-top: 20px;
 }
 
-.sidebar h2 {
+.nav h2 {
     font-size: 24px;
     color: #E0F2FE;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
-.sidebar ul {
+.nav ul {
     list-style: none;
     padding: 0;
     width: 100%;
     text-align: center;
 }
 
-.sidebar ul li {
+.nav ul li {
     margin: 15px 0;
 }
 
-.sidebar ul li a {
+.nav ul li a {
     display: block;
     font-size: 28px; /* Increased by 170% */
     color: #E0F2FE; /* Light blue */
@@ -66,10 +66,20 @@ html, body {
     transition: 0.3s ease-in-out;
 }
 
-.sidebar ul li a:hover {
+.nav ul li a:hover {
     background: #60A5FA; /* Brighter blue hover effect */
     color: #1E3A8A; /* Dark blue text */
     border-radius: 8px;
+}
+
+#pageid {
+    padding: 20px;
+    /*height: 100%;*/
+    
+    margin-bottom: 50%;
+    bottom:10px;   
+    position: absolute;
+    color: #1E3A8A;
 }
 
 /* ==================================
