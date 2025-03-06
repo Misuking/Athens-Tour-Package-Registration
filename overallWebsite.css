@@ -407,7 +407,6 @@ footer {
     margin: 0 auto;
     padding: 20px 0;
 }
-
 /* ==================================
    HISTORY PAGE INTERACTIVITY 
 ================================== */
@@ -423,8 +422,8 @@ footer {
 
 /* 🏛️ Historical Background Box */
 .bkgrd {
-    background: rgba(255, 255, 255, 0.9);
-    color: rgb(50, 50, 50);
+    background: rgba(255, 255, 255, 0.95) !important; /* Ensures consistent white */
+    color: #1E3A8A !important; /* Ensures consistent blue text */
     padding: 30px;
     border-radius: 10px;
     text-align: left;
@@ -476,7 +475,7 @@ footer {
     padding: 20px;
     position: relative;
     width: 45%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98) !important; /* Prevents unexpected dark blue */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
@@ -536,7 +535,7 @@ footer {
 }
 
 /* ==================================
-   🔥 ENHANCED BEAUTY ADD-ON
+   ENHANCED BEAUTY ADD-ON
 ================================== */
 
 /* 📜 Elegant Glassmorphism for Content */
@@ -568,13 +567,6 @@ footer {
     line-height: 1.6;
 }
 
-/* 🏛️ Gradient Border for Timeline Events */
-.timeline-event {
-    border-left: 5px solid;
-    border-image: linear-gradient(to bottom, #1E3A8A, #60A5FA) 1;
-    padding-left: 20px;
-}
-
 /* ✨ Hover Glow for Timeline Dots */
 .timeline-event::before {
     transition: all 0.3s ease-in-out;
@@ -591,18 +583,6 @@ body {
     background-blend-mode: overlay;
 }
 
-/* 🔽 Expanding Button Effect */
-.toggle-btn {
-    font-size: 18px;
-    border: 2px solid white;
-    transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.toggle-btn:hover {
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
-    transform: scale(1.05);
-}
-
 /* 🌠 Elegant Footer Styling */
 footer {
     background: rgba(0, 0, 0, 0.6);
@@ -613,13 +593,13 @@ footer {
 }
 
 /* ==================================
-   HISTORY PAGE - Enhanced Styling
+   HISTORY PAGE - FIXED STYLING
 ================================== */
 
 /* Section Containers - Smooth Entrance */
 .bkgrd {
-    background: rgba(255, 255, 255, 0.92);
-    color: #1E3A8A;
+    background: rgba(255, 255, 255, 0.95) !important; /* Forces white background */
+    color: #1E3A8A !important; /* Ensures all text remains blue */
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -641,7 +621,7 @@ footer {
 /* Header Styling - Darker Blue */
 .bkgrd h2 {
     font-size: 28px;
-    color: #112D66; /* Darker navy blue */
+    color: #112D66 !important; /* Forces navy blue */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
 }
@@ -650,32 +630,13 @@ footer {
 .bkgrd p {
     font-size: 18px;
     line-height: 1.8;
-    color: #333;
+    color: #1E3A8A !important; /* Ensures no grey text */
 }
 
-/* Alternating Section Colors for Contrast */
+/* Fixes unwanted dark blue sections */
 .bkgrd:nth-child(even) {
-    background: rgba(17, 45, 102, 0.92);
-    color: #ffffff;
-}
-
-/* Adjusted Hover Effect */
-.bkgrd:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Subtle Background Overlay for Depth */
-.content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(17, 45, 102, 0.7));
-    z-index: -1;
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #1E3A8A !important;
 }
 
 /* ================================
@@ -692,7 +653,7 @@ footer {
     }
 }
 
-/* JavaScript will add this class when section is in view */
+/* JavaScript-triggered animation */
 .bkgrd.in-view {
     animation: slideIn 0.8s ease-out forwards;
 }
