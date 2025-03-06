@@ -1,39 +1,120 @@
-<!-- tour packages (images of tours and stuff )-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title> PAGENAMEHERE </title>
-	<link rel="stylesheet" href="overallWebsite.css">
-    <link rel="icon" href="./images/circle-flags--gr.svg">
-    <style>
-        body {
-            background-image:  url('./images/garden1.jpg');
-            background-size: cover;
-            z-index: -2;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Athens Tours</title>
+    <link rel="stylesheet" href="overallWebsite.css">
+    <script defer src="faq.js"></script> <!-- JavaScript for FAQ toggle -->
 </head>
+<style>
+    body {
+        background-image: url('./images/athens5.jpg'); /* Replace with actual image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
 <body>
+
+    <!-- Sidebar Navigation (Consistent Across Pages) -->
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544;</a></li>
-            <li><a href="page-2.html">&#8545;</a></li>
-            <li><a href="page-3.html">&#8546;</a></li>
-            <li><a href="page-4.html">&#8547;</a></li>
-            <li><a href="page-5.html">&#8548;</a></li>
-            <li><a href="page-6.html">&#8549;</a></li>
-        </ul>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544;</a></li>
+                <li><a href="page-2.html">&#8545;</a></li>
+                <li><a href="page-3.html" class="active">&#8546;</a></li> <!-- Current Page Highlight -->
+                <li><a href="page-4.html">&#8547;</a></li>
+                <li><a href="page-5.html">&#8548;</a></li>
+                <li><a href="page-6.html">&#8549;</a></li>
+            </ul>
+        </div>
+        <div id="pageid">
+            <p>&#8546;</p> <!-- Roman numeral indicator for Page 3 -->
+        </div>
     </div>
-    <div id="pageid">
-        <p>&#8546;</p>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our Athens tours, pricing, schedules, and policies.</p>
+        </header>
+
+        <main>
+            <section id="faq-section">
+                <div class="faq-container">
+                    
+                    <div class="bkgrd">
+                        <h2>General Information</h2>
+                        <div class="faq">
+                            <button class="faq-question">What is included in the tour price?</button>
+                            <div class="faq-answer">
+                                <p>Each tour includes a professional English-speaking guide, entrance fees to historical sites, and transportation when applicable. Food and personal expenses are not covered unless otherwise stated.</p>
+                            </div>
+
+                            <button class="faq-question">How long do the tours last?</button>
+                            <div class="faq-answer">
+                                <p>The duration of our tours varies. Most half-day tours last around 4 hours, while full-day tours typically last 8-10 hours.</p>
+                            </div>
+
+                            <button class="faq-question">Are the tours suitable for children?</button>
+                            <div class="faq-answer">
+                                <p>Yes! Our tours are designed to be engaging for all age groups. We also offer family-friendly tours that are tailored to keep young travelers entertained.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bkgrd">
+                        <h2>Booking & Payments</h2>
+                        <div class="faq">
+                            <button class="faq-question">How do I book a tour?</button>
+                            <div class="faq-answer">
+                                <p>You can book directly through our website using the "Book Now" buttons on each tour package page. A confirmation email will be sent upon successful payment.</p>
+                            </div>
+
+                            <button class="faq-question">What payment methods do you accept?</button>
+                            <div class="faq-answer">
+                                <p>We accept all major credit cards (Visa, MasterCard, American Express) as well as PayPal and Apple Pay for secure transactions.</p>
+                            </div>
+
+                            <button class="faq-question">Can I cancel my booking?</button>
+                            <div class="faq-answer">
+                                <p>Cancellations made up to 48 hours before the tour date are eligible for a full refund. Cancellations within 48 hours will incur a 50% charge.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bkgrd">
+                        <h2>Tour Logistics</h2>
+                        <div class="faq">
+                            <button class="faq-question">Where do the tours start?</button>
+                            <div class="faq-answer">
+                                <p>Meeting points vary by tour but are typically near major landmarks or metro stations. Exact details will be provided in your confirmation email.</p>
+                            </div>
+
+                            <button class="faq-question">Do you offer private tours?</button>
+                            <div class="faq-answer">
+                                <p>Yes! We offer fully customizable private tours for individuals, families, or groups. Contact us for personalized arrangements.</p>
+                            </div>
+
+                            <button class="faq-question">Is transportation provided?</button>
+                            <div class="faq-answer">
+                                <p>Some tours include transportation, while others require meeting at a designated location. Please check each tour description for details.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
+        </footer>
     </div>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
-    </footer>
+
 </body>
 </html>
