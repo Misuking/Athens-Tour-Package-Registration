@@ -39,7 +39,8 @@
                     <h2> Registration Fourm</h2>
                     <form action="" name="MainForm">
                         <br>
-                        <!--first and last name inputs and labels -->
+                        <!--first, last, and email -->
+                        <!--currently does not do anything but we'll see if we want to change it to do something-->
                         <label for="firstName"> <b> Please enter your first name : </b> </label>
                         <input type="text" name="firstName" id="firstName">
                         <br> <br>
@@ -48,7 +49,9 @@
                         <br> <br>
                         <label for="email"> <b> Please enter your email : </b> </label>
                         <input type="email" name="email" id="email">
+
                         <!--checkbox of various types of plans(?)-->
+                        <!-- specific values that are multiplied with the number of people in the package-->
                         <br> <br>
                         <label for="option1"> <b> Please enter specific options for your package! (applies to everyone who is attending)</b> </label><br>
                         <input type="checkbox" id="option1" name="appliesAll" value="1200 " checked>
@@ -56,6 +59,9 @@
                         <input type="checkbox" id="option2" name="appliesAll" value="100" checked>
                         <label for="option2"> <b> Meals  -- 100$</b> </label><br>
                         <br>
+
+
+                        <!--specific values that are only added, and not applied for each person -->
                         <label for="option1"> <b> Please enter specific options for your package! (applies once)</b> </label><br>
                         <input type="checkbox" id="option3" name="appliesSingle" value="250">
                         <label for="option3"> <b> Suite  -- 250$</b></label> <br>
@@ -63,8 +69,9 @@
                         <label for="option4"> <b> Pool  -- 50$</b></label> <br>
                         <input type="checkbox" id="option5" name="appliesSingle" value="30">
                         <label for="option5"> <b> Pet Room  -- 30$</b></label> <br>
-                        <!--number of people dropdown-->
                         <br> 
+
+                        <!--number of people dropdown-->
                         <label for="numPeople"> Please enter the amount of people who want to attend : </label>
                         <select id="numPeople" name="numPeople">
                             <option value="1" selected>1</option>
@@ -72,7 +79,9 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
-                        <!--package type dropdown-->
+
+
+                        <!--package type dropdown, all the prices are in the value and the text itself -->
                         <br> <br>
                         <label for="packageType"> Please enter the type of package you would like to have : </label>
                         <select id="packageType" name="packageType">
@@ -81,7 +90,8 @@
                             <option value="100"> Athens by Night -- 100$ </option>
                             <option value="75"> Greek Mythology Experience -- 75$</option>
                         </select>
-                        <!--radio buttons at the bottom -->
+
+                        <!--radio buttons at the bottom, if they want to have airline travel on the way back (?)-->
                         <br> <br>
                         <p> <b> Include Airline Travel (600$): </b> </p>
                         <input type="radio" id="airlineTravel" name="airLine" value="600" checked>
@@ -89,18 +99,18 @@
                         <input type="radio" id="airlineTravel" name="airLine" value="0">
                         <label for="N"> <b>No</b> </label>
                         <br><br>
-                        <input type="text" id="PicExtPrice" Size=8 style="text-align: center;">
-                        <br>
 
+                        <!--displays the total cost of all of the things the person selected-->
+                        <input type="text" id="PicExtPrice" Size=8 style="text-align: center;" readonly>
+                        <br>
                         <button type="button" onclick="calculatePrice()"> Calculate Costs </button>
                         
+                        <!--doesnt do anything atm, but i dont think we'll make it do anything -->
                         <br><br>
                         <input type="submit" value="Next Page">
                     </form>
                 </div>
             </section>
-
-
         </main>
 
         <footer>
