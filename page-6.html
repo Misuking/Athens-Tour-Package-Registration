@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title> PAGENAMEHERE </title>
+	<title> Fourm Page </title>
+    <script src="./formCalculations.js"></script>
 	<link rel="stylesheet" href="overallWebsite.css">
     <link rel="icon" href="./images/circle-flags--gr.svg">
     <style>
@@ -36,7 +37,7 @@
             <section id="about">
                 <div class="bkgrd">
                     <h2> Registration Fourm</h2>
-                    <form action="">
+                    <form action="" name="MainForm">
                         <br>
                         <!--first and last name inputs and labels -->
                         <label for="firstName"> <b> Please enter your first name : </b> </label>
@@ -44,18 +45,24 @@
                         <br> <br>
                         <label for="lastName"> <b> Please enter your last name : </b> </label>
                         <input type="text" name="lastName" id="lastName">
+                        <br> <br>
+                        <label for="email"> <b> Please enter your email : </b> </label>
+                        <input type="email" name="email" id="email">
                         <!--checkbox of various types of plans(?)-->
                         <br> <br>
-                        <input type="checkbox" id="option1" name="option1" value="Bike">
-                        <label for="option1"> <b> Flight </b> </label><br>
-                        <input type="checkbox" id="option2" name="option2" value="Car">
-                        <label for="option2"> <b> Meals </b> </label><br>
-                        <input type="checkbox" id="option3" name="option3" value="Boat">
-                        <label for="option3"> <b> Suite </b></label> <br>
-                        <input type="checkbox" id="option4" name="option4" value="Bus">
-                        <label for="option4"> <b> Pool </b></label> <br>
-                        <input type="checkbox" id="option5" name="option5" value="2003NissanMurado">
-                        <label for="option5"> <b> Pet Room </b></label> <br>
+                        <label for="option1"> <b> Please enter specific options for your package! (applies to everyone who is attending)</b> </label><br>
+                        <input type="checkbox" id="option1" name="appliesAll" value="1200 " checked>
+                        <label for="option1"> <b> Flight Tickets -- 1200$</b> </label><br>
+                        <input type="checkbox" id="option2" name="appliesAll" value="100" checked>
+                        <label for="option2"> <b> Meals  -- 100$</b> </label><br>
+                        <br>
+                        <label for="option1"> <b> Please enter specific options for your package! (applies once)</b> </label><br>
+                        <input type="checkbox" id="option3" name="appliesSingle" value="250">
+                        <label for="option3"> <b> Suite  -- 250$</b></label> <br>
+                        <input type="checkbox" id="option4" name="appliesSingle" value="50">
+                        <label for="option4"> <b> Pool  -- 50$</b></label> <br>
+                        <input type="checkbox" id="option5" name="appliesSingle" value="30">
+                        <label for="option5"> <b> Pet Room  -- 30$</b></label> <br>
                         <!--number of people dropdown-->
                         <br> 
                         <label for="numPeople"> Please enter the amount of people who want to attend : </label>
@@ -69,20 +76,26 @@
                         <br> <br>
                         <label for="packageType"> Please enter the type of package you would like to have : </label>
                         <select id="packageType" name="packageType">
-                            <option value="packageA" selected> packageA </option>
-                            <option value="packageB"> packageB </option>
-                            <option value="packageC"> packageC </option>
-                            <option value="packageD"> packageD </option>
+                            <option value="85" selected> Acropolis & Parthenon Tour -- 85$ </option>
+                            <option value="60"> Ancient Agora Walk  -- 60$</option>
+                            <option value="100"> Athens by Night -- 100$ </option>
+                            <option value="75"> Greek Mythology Experience -- 75$</option>
                         </select>
                         <!--radio buttons at the bottom -->
                         <br> <br>
-                        <p> <b> Include Airline Travel : </b> </p>
-                        <input type="radio" id="airlineTravel" name="Y">
+                        <p> <b> Include Airline Travel (600$): </b> </p>
+                        <input type="radio" id="airlineTravel" name="airLine" value="600" checked>
                         <label for="Y"> <b>Yes</b>  </label>
-                        <input type="radio" id="airlineTravel" name="N">
+                        <input type="radio" id="airlineTravel" name="airLine" value="0">
                         <label for="N"> <b>No</b> </label>
                         <br><br>
-                        <input type="submit" value="Process Request">
+                        <input type="text" id="PicExtPrice" Size=8 style="text-align: center;">
+                        <br>
+
+                        <button type="button" onclick="calculatePrice()"> Calculate Costs </button>
+                        
+                        <br><br>
+                        <input type="submit" value="Next Page">
                     </form>
                 </div>
             </section>
