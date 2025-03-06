@@ -1,47 +1,67 @@
 <!--regristration and booking-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title> Fourm Page </title>
+    <meta charset="utf-8">
+    <title> Fourm Page </title>
     <script src="./formCalculations.js"></script>
     <script defer src="history-animation.js"></script>
-	<link rel="stylesheet" href="overallWebsite.css">
+    <link rel="stylesheet" href="overallWebsite.css">
     <link rel="icon" href="./images/circle-flags--gr.svg">
     <style>
         body {
-            background-image:  url('./images/athens5.jpg');
+            background-image: url('./images/athens5.jpg');
             background-size: cover;
             z-index: -2;
         }
     </style>
+    <script>
+
+
+        function wait(f) {
+            setTimeout(() => {
+                f()
+            }, 1)
+        }
+
+        function main() {
+            var data = sessionStorage.getItem("selectedType");
+            if (data) {
+                let specifiedDoc = document.getElementById(data)
+                specifiedDoc.selected = true
+            }
+        }
+
+        wait(main)
+
+
+    </script>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544; Home</a></li>
-            <li><a href="page-2.html">&#8545; Tours</a></li>
-            <li><a href="page-3.html">&#8546; FAQ</a></li>
-            <li><a href="page-4.html">&#8547; Hotels</a></li>
-            <li><a href="page-5.html">&#8548; History</a></li>
-            <li><a href="page-6.html">&#8549; Register</a></li>
-        </ul>
-    </div>
-    <div id="pageid">
-        <p>&#8549;</p>
-    </div>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544; Home</a></li>
+                <li><a href="page-2.html">&#8545; Tours</a></li>
+                <li><a href="page-3.html">&#8546; FAQ</a></li>
+                <li><a href="page-4.html">&#8547; Hotels</a></li>
+                <li><a href="page-5.html">&#8548; History</a></li>
+                <li><a href="page-6.html">&#8549; Register</a></li>
+            </ul>
+        </div>
+        <div id="pageid">
+            <p>&#8549;</p>
+        </div>
     </div>
     <div class="content">
         <main>
             <section id="about">
                 <div class="bkgrd">
                     <h2> Registration Fourm</h2>
-                    <form 
-                    method="post"
-                    action="http://ss1.ciwcertified.com/cgi-bin/process.php"
-                    name="MainForm">
+                    <form method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.php" name="MainForm">
                         <br>
                         <!--first, last, and email -->
                         <!--currently does not do anything but we'll see if we want to change it to do something-->
@@ -57,23 +77,25 @@
                         <!--checkbox of various types of plans(?)-->
                         <!-- specific values that are multiplied with the number of people in the package-->
                         <br> <br>
-                        <label for="option1"> <b> Please enter the hotel you will be staying at with your group! </b> </label><br>
+                        <label for="option1"> <b> Please enter the hotel you will be staying at with your group! </b>
+                        </label><br>
                         <input type="checkbox" id="option1" name="appliesAll" value="1200 " checked>
                         <label for="option1"> <b> Flight Tickets -- 1200$</b> </label><br>
                         <input type="checkbox" id="option2" name="appliesAll" value="100" checked>
-                        <label for="option2"> <b> Meals  -- 100$</b> </label><br>
+                        <label for="option2"> <b> Meals -- 100$</b> </label><br>
                         <br>
 
 
                         <!--specific values that are only added, and not applied for each person -->
-                        <label for="option1"> <b> Please enter specific options for your package! (applies once)</b> </label><br>
+                        <label for="option1"> <b> Please enter specific options for your package! (applies once)</b>
+                        </label><br>
                         <input type="checkbox" id="option3" name="appliesSingle" value="250">
-                        <label for="option3"> <b> Suite  -- 250$</b></label> <br>
+                        <label for="option3"> <b> Suite -- 250$</b></label> <br>
                         <input type="checkbox" id="option4" name="appliesSingle" value="50">
-                        <label for="option4"> <b> Pool  -- 50$</b></label> <br>
+                        <label for="option4"> <b> Pool -- 50$</b></label> <br>
                         <input type="checkbox" id="option5" name="appliesSingle" value="30">
-                        <label for="option5"> <b> Pet Room  -- 30$</b></label> <br>
-                        <br> 
+                        <label for="option5"> <b> Pet Room -- 30$</b></label> <br>
+                        <br>
 
                         <!--number of people dropdown-->
                         <label for="numPeople"> Please enter the amount of people who want to attend : </label>
@@ -89,22 +111,22 @@
                         <br> <br>
                         <label for="packageType"> Please enter the type of package you would like to have : </label>
                         <select id="packageType" name="packageType">
-                            <option value="60" selected> Ancient Agora Walk  -- 60$</option>
-                            <option value="75"> Greek Mythology Experience -- 75$</option>
-                            <option value="85"> Acropolis & Parthenon Tour -- 85$ </option>
-                            <option value="100"> Athens by Night -- 100$ </option>
+                            <option value="60" id="60"> Ancient Agora Walk -- 60$</option>
+                            <option value="75" id="75"> Greek Mythology Experience -- 75$</option>
+                            <option value="85" id="85"> Acropolis & Parthenon Tour -- 85$ </option>
+                            <option value="100" id="100"> Athens by Night -- 100$ </option>
                         </select>
 
                         <!--hotel type dropdown, all the prices are in the value and the text itself and are applied to all of the people -->
                         <br> <br>
                         <label for="hotelType"> Please enter the type of package you would like to have : </label>
                         <select id="hotelType" name="hotelType">
-                            <option value="55" selected> Dorian Inn (8.0 stars) -- 55$</option>
-                            <option value="85">  The Stanley (8.4 stars) -- 85$</option>
-                            <option value="94">  Central Hotel (8.5 stars) -- 94$</option>
-                            <option value="128"> Athens Marriott Hotel (8.5 stars) --  128$ </option>
-                            <option value="145"> Royal Olympic Hotel (7.6 stars) -- 145$ </option>
-                            <option value="148"> Grand Hyatt Athens (8.5 stars) -- 148$ </option>
+                            <option value="55" id="55"> Dorian Inn (8.0 stars) -- 55$</option>
+                            <option value="85" id="85.0"> The Stanley (8.4 stars) -- 85$</option>
+                            <option value="94" id="94"> Central Hotel (8.5 stars) -- 94$</option>
+                            <option value="128" id="128"> Athens Marriott Hotel (8.5 stars) -- 128$ </option>
+                            <option value="145" id="145"> Royal Olympic Hotel (7.6 stars) -- 145$ </option>
+                            <option value="146" id="146"> Grand Hyatt Athens (8.5 stars) -- 146$ </option>
                         </select>
 
 
@@ -112,7 +134,7 @@
                         <br> <br>
                         <p> <b> Include Airline Return Travel (600$): </b> </p>
                         <input type="radio" id="airlineTravel" name="airLine" value="600" checked>
-                        <label for="Y"> <b>Yes</b>  </label>
+                        <label for="Y"> <b>Yes</b> </label>
                         <input type="radio" id="airlineTravel" name="airLine" value="0">
                         <label for="N"> <b>No</b> </label>
                         <br><br>
@@ -121,7 +143,7 @@
                         <input type="text" id="PicExtPrice" Size=8 style="text-align: center;" readonly>
                         <br>
                         <button type="button" onclick="calculatePrice()"> Calculate Costs </button>
-                        
+
                         <!--doesnt do anything atm, but i dont think we'll make it do anything -->
                         <br><br>
                         <input type="submit" value="Submit">
@@ -135,4 +157,5 @@
         </footer>
     </div>
 </body>
+
 </html>
