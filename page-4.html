@@ -1,39 +1,101 @@
-<!--regristration and booking-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title> PAGENAMEHERE </title>
-	<link rel="stylesheet" href="overallWebsite.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Hotels</title>
+    <link rel="stylesheet" href="overallWebsite.css"> <!-- Your main CSS -->
     <link rel="icon" href="./images/circle-flags--gr.svg">
-    <style>
-        body {
-            background-image:  url('./images/athensview4.jpg');
-            background-size: cover;
-            z-index: -2;
-        }
-    </style>
 </head>
+<style>
+    body {
+        background-image: url('./images/Parthenon2.jpg'); /* Replace with actual image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+
 <body>
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544;</a></li>
-            <li><a href="page-2.html">&#8545;</a></li>
-            <li><a href="page-3.html">&#8546;</a></li>
-            <li><a href="page-4.html">&#8547;</a></li>
-            <li><a href="page-5.html">&#8548;</a></li>
-            <li><a href="page-6.html">&#8549;</a></li>
-        </ul>
-    </div>
-    <div id="pageid">
-        <p>&#8547;</p>
-    </div>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544;</a></li>
+                <li><a href="page-2.html">&#8545;</a></li>
+                <li><a href="page-3.html">&#8546;</a></li>
+                <li><a href="page-4.html">&#8547;</a></li>
+                <li><a href="page-5.html">&#8548;</a></li>
+                <li><a href="page-6.html">&#8549;</a></li>
+            </ul>
+        </div>
+        <div id="pageid">
+            <p>🏨 Hotels</p>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
-    </footer>
+    <div class="content">
+        <main>
+            <section id="hotels">
+                <h2>Top Hotels in Athens</h2>
+                <div class="hotel-container">
+
+                    <!-- Grand Hyatt Athens -->
+                    <div class="hotel-card">
+                        <img src="./images/grand-hyatt-athens.jpg" alt="Grand Hyatt Athens">
+                        <h3>Grand Hyatt Athens</h3>
+                        <p><strong>Price:</strong> $146 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                    <!-- Dorian Inn -->
+                    <div class="hotel-card">
+                        <img src="./images/dorian-inn.jpg" alt="Dorian Inn">
+                        <h3>Dorian Inn - Sure Hotel Collection by Best Western</h3>
+                        <p><strong>Price:</strong> $55 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                    <!-- Athens Marriott Hotel -->
+                    <div class="hotel-card">
+                        <img src="./images/athens-marriot-hotel.jpg" alt="Athens Marriott Hotel">
+                        <h3>Athens Marriott Hotel</h3>
+                        <p><strong>Price:</strong> $128 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                    <!-- Royal Olympic Hotel -->
+                    <div class="hotel-card">
+                        <img src="./images/royal-olympic.jpg" alt="Royal Olympic Hotel">
+                        <h3>Royal Olympic Hotel</h3>
+                        <p><strong>Price:</strong> $145 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                    <!-- The Stanley -->
+                    <div class="hotel-card">
+                        <img src="./images/the-stanley.jpg" alt="The Stanley">
+                        <h3>The Stanley</h3>
+                        <p><strong>Price:</strong> $85 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                    <!-- Central Hotel -->
+                    <div class="hotel-card">
+                        <img src="./images/central-hotel.jpg" alt="Central Hotel">
+                        <h3>Central Hotel</h3>
+                        <p><strong>Price:</strong> $94 per night</p>
+                        <button>Book Now</button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
