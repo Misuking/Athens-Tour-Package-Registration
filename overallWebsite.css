@@ -2,6 +2,19 @@
    IMPORT GOOGLE FONTS
 ================================== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+/* ==================================
+   TOUR PACKAGE IMAGES (Properly Resized)
+================================== */
+.tour-img {
+    width: 100%; /* Makes the image fit within the container */
+    max-width: 400px; /* Prevents images from being too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto 15px; /* Centers the image and adds spacing */
+    border-radius: 10px; /* Smooth rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 
 /* ==================================
    RESET & BASE STYLES
@@ -205,6 +218,10 @@ header p {
 }
 
 
+
+
+
+
 /* ==================================
    FOOTER (FIXED AT BOTTOM)
 ================================== */
@@ -237,5 +254,445 @@ footer {
 }
 
 .pColoredText > p , h1 , label {
-    color: rgb(86, 131, 255);
+    color: #003FCD;
+}
+
+/* ==================================
+   BOOK NOW BUTTON STYLING
+================================== */
+.book-btn {
+    background: linear-gradient(to right, #1E3A8A, #3B82F6); /* Blue gradient */
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 15px;
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    width: fit-content;
+    margin: 15px auto; /* Centers the button */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Hover effect */
+.book-btn:hover {
+    background: linear-gradient(to right, #3B82F6, #60A5FA); /* Lighter blue */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* More depth on hover */
+    transform: scale(1.05);
+}
+
+/* Click effect */
+.book-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================================
+   FAQ SECTION (FULLY CENTERED & RESPONSIVE)
+================================== */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the FAQ section */
+    width: 100%;
+    max-width: 900px; /* Prevents stretching */
+    margin: 40px auto; /* Centers on page */
+    padding: 30px;
+}
+
+/* Individual FAQ Section (General, Booking, Logistics) */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1E3A8A;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* FAQ Section Headers (General, Booking, Logistics) */
+.bkgrd h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* FAQ Item Container */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* FAQ Question Button */
+.faq-question {
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Arrow Indicator */
+.faq-question::after {
+    content: "▼";
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* When Active (Expanded) */
+.faq-question.active::after {
+    transform: rotate(180deg);
+}
+
+/* Hover Effect */
+.faq-question:hover {
+    background: linear-gradient(to right, #3B82F6, #60A5FA);
+    transform: scale(1.02);
+}
+
+/* FAQ Answer Box */
+.faq-answer {
+    display: none;
+    background: rgba(240, 240, 240, 0.95);
+    color: #1E3A8A;
+    padding: 0 15px;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* When Answer is Active (Expanded) */
+.faq-question.active + .faq-answer {
+    display: block;
+    padding: 12px 15px;
+}
+
+/* Adjusting `.content` for Full Centering */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Ensure FAQ Sections Stay Centered */
+.content section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ==================================
+   HISTORY PAGE INTERACTIVITY 
+================================== */
+
+/* 📜 History Section Styling */
+#about {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 🏛️ Historical Background Box */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.9);
+    color: rgb(50, 50, 50);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏺 Expandable History Sections */
+.history-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid #1E3A8A;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Hover Effect for Interactive Sections */
+.history-section:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+/* 🕰️ Timeline Effect */
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+/* 🏛️ Timeline Dots */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #1E3A8A;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* 🏛️ Timeline Events */
+.timeline-event {
+    padding: 20px;
+    position: relative;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📜 Alternating Left/Right Positioning */
+.timeline-event:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-event:nth-child(even) {
+    left: 50%;
+}
+
+/* 🔘 Timeline Event Dots */
+.timeline-event::before {
+    content: ' ';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #60A5FA;
+    border-radius: 50%;
+    top: 15px;
+    right: -8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-event:nth-child(even)::before {
+    left: -8px;
+}
+
+/* 🎭 Expandable Sections for Detailed History */
+.expandable {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 5px solid #3B82F6;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    display: none;
+}
+
+/* 🔽 Expandable Toggle Button */
+.toggle-btn {
+    background: #1E3A8A;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    background: #3B82F6;
+}
+
+/* ==================================
+   🔥 ENHANCED BEAUTY ADD-ON
+================================== */
+
+/* 📜 Elegant Glassmorphism for Content */
+.history-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* 🎭 Subtle Glow for Headings */
+.history-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* 🏺 Shadowed Text for Readability */
+.history-container p {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+}
+
+/* 🏛️ Gradient Border for Timeline Events */
+.timeline-event {
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom, #1E3A8A, #60A5FA) 1;
+    padding-left: 20px;
+}
+
+/* ✨ Hover Glow for Timeline Dots */
+.timeline-event::before {
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-event:hover::before {
+    box-shadow: 0 0 10px #60A5FA, 0 0 20px #3B82F6;
+}
+
+/* 🌌 Parallax Background Effect */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* 🔽 Expanding Button Effect */
+.toggle-btn {
+    font-size: 18px;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* 🌠 Elegant Footer Styling */
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-top: 3px solid #60A5FA;
+}
+
+/* ==================================
+   HISTORY PAGE - Enhanced Styling
+================================== */
+
+/* Section Containers - Smooth Entrance */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.92);
+    color: #1E3A8A;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* When scrolled into view */
+.bkgrd.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Styling - Darker Blue */
+.bkgrd h2 {
+    font-size: 28px;
+    color: #112D66; /* Darker navy blue */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling - Enhanced Readability */
+.bkgrd p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Alternating Section Colors for Contrast */
+.bkgrd:nth-child(even) {
+    background: rgba(17, 45, 102, 0.92);
+    color: #ffffff;
+}
+
+/* Adjusted Hover Effect */
+.bkgrd:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Subtle Background Overlay for Depth */
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(17, 45, 102, 0.7));
+    z-index: -1;
+}
+
+/* ================================
+   SCROLL-TRIGGERED ANIMATION
+================================ */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* JavaScript will add this class when section is in view */
+.bkgrd.in-view {
+    animation: slideIn 0.8s ease-out forwards;
 }
