@@ -771,3 +771,158 @@ footer {
     color: white;
     border-radius: 5px;
 }
+
+/* HOTEL PAGE ADD-ON STYLING */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* MAIN HOTEL CONTAINER */
+.hotel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* HOTEL CARD DESIGN */
+.hotel-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+}
+
+/* HOTEL IMAGES */
+.hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* HOTEL NAMES */
+.hotel-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* PRICING */
+.hotel-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* SHINY BOOK NOW BUTTON */
+.hotel-card button {
+    background: linear-gradient(180deg, #0099ff, #0077cc);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel-card button:hover {
+    background: linear-gradient(180deg, #00aaff, #0066bb);
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.5);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+}
+
+/* ==================================
+   GLOBAL BACKGROUND FIX
+================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65),  /* Darker overlay for better contrast */
+        rgba(0, 0, 0, 0.45)
+    ), 
+    url('breathtaking-views-over-athens.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ==================================
+   SECTION CONTAINERS - FIXED BACKGROUND ISSUE
+================================== */
+.bkgrd {
+    background: rgba(255, 255, 255, 0.85); /* Reduced transparency for less brightness */
+    color: #1E3A8A;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================
+   HEADER - BETTER CONTRAST
+================================== */
+header {
+    background: rgba(255, 255, 255, 0.12); /* Lighter overlay for subtle elegance */
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+    backdrop-filter: blur(8px); /* Slight blur effect for soft elegance */
+}
+
+/* ==================================
+   FOOTER - ENHANCED READABILITY
+================================== */
+footer {
+    background: rgba(0, 0, 0, 0.7); /* Slightly more opaque for better readability */
+    color: white;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-top: 3px solid #60A5FA;
+}
+
+/* ==================================
+   ADDED GRADIENT OVERLAY FOR SECTIONS
+================================== */
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(17, 45, 102, 0.5));
+    z-index: -1;
+}
