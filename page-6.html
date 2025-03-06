@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title> Fourm Page </title>
     <script src="./formCalculations.js"></script>
+    <script defer src="history-animation.js"></script>
 	<link rel="stylesheet" href="overallWebsite.css">
     <link rel="icon" href="./images/circle-flags--gr.svg">
     <style>
@@ -37,7 +38,10 @@
             <section id="about">
                 <div class="bkgrd">
                     <h2> Registration Fourm</h2>
-                    <form action="" name="MainForm">
+                    <form 
+                    method="post"
+                    action="http://ss1.ciwcertified.com/cgi-bin/process.php"
+                    name="MainForm">
                         <br>
                         <!--first, last, and email -->
                         <!--currently does not do anything but we'll see if we want to change it to do something-->
@@ -53,7 +57,7 @@
                         <!--checkbox of various types of plans(?)-->
                         <!-- specific values that are multiplied with the number of people in the package-->
                         <br> <br>
-                        <label for="option1"> <b> Please enter specific options for your package! (applies to everyone who is attending)</b> </label><br>
+                        <label for="option1"> <b> Please enter the hotel you will be staying at with your group! </b> </label><br>
                         <input type="checkbox" id="option1" name="appliesAll" value="1200 " checked>
                         <label for="option1"> <b> Flight Tickets -- 1200$</b> </label><br>
                         <input type="checkbox" id="option2" name="appliesAll" value="100" checked>
@@ -81,7 +85,7 @@
                         </select>
 
 
-                        <!--package type dropdown, all the prices are in the value and the text itself -->
+                        <!--package type dropdown, all the prices are in the value and the text itself and are applied to all of the people  -->
                         <br> <br>
                         <label for="packageType"> Please enter the type of package you would like to have : </label>
                         <select id="packageType" name="packageType">
@@ -91,9 +95,22 @@
                             <option value="100"> Athens by Night -- 100$ </option>
                         </select>
 
+                        <!--hotel type dropdown, all the prices are in the value and the text itself and are applied to all of the people -->
+                        <br> <br>
+                        <label for="hotelType"> Please enter the type of package you would like to have : </label>
+                        <select id="hotelType" name="hotelType">
+                            <option value="55" selected> Dorian Inn (8.0 stars) -- 55$</option>
+                            <option value="85">  The Stanley (8.4 stars) -- 85$</option>
+                            <option value="94">  Central Hotel (8.5 stars) -- 94$</option>
+                            <option value="128"> Athens Marriott Hotel (8.5 stars) --  128$ </option>
+                            <option value="145"> Royal Olympic Hotel (7.6 stars) -- 145$ </option>
+                            <option value="148"> Grand Hyatt Athens (8.5 stars) -- 148$ </option>
+                        </select>
+
+
                         <!--radio buttons at the bottom, if they want to have airline travel on the way back (?)-->
                         <br> <br>
-                        <p> <b> Include Airline Travel (600$): </b> </p>
+                        <p> <b> Include Airline Return Travel (600$): </b> </p>
                         <input type="radio" id="airlineTravel" name="airLine" value="600" checked>
                         <label for="Y"> <b>Yes</b>  </label>
                         <input type="radio" id="airlineTravel" name="airLine" value="0">
@@ -107,7 +124,7 @@
                         
                         <!--doesnt do anything atm, but i dont think we'll make it do anything -->
                         <br><br>
-                        <input type="submit" value="Next Page">
+                        <input type="submit" value="Submit">
                     </form>
                 </div>
             </section>
