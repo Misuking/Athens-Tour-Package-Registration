@@ -1,102 +1,65 @@
-<!--regristration and booking-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title> Forum</title>
-    <link rel="stylesheet" href="overallWebsite.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Tour - Video</title>
     <link rel="icon" href="./images/circle-flags--gr.svg">
+    <link rel="stylesheet" href="overallWebsite.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script defer src="history-animation.js"></script>
     <style>
         body {
-            background-image: url('./images/athensview3.jpeg');
+            background-image: url('./images/ancient-agora.jpg');
             background-size: cover;
-            z-index: -2;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
         }
     </style>
 </head>
-
 <body>
     <div class="sidebar">
         <div class="nav">
-        <h2>Athens</h2>
-        <ul>
-            <li><a href="page-1.html">&#8544; Home</a></li>
-            <li><a href="page-2.html">&#8545; Tours</a></li>
-            <li><a href="page-3.html">&#8546; FAQ</a></li>
-            <li><a href="page-4.html">&#8547; Hotels</a></li>
-            <li><a href="page-5.html">&#8548; History</a></li>
-            <li><a href="page-6.html">&#8549; Register</a></li>
-       +
-        </ul>
-        </div>
-        <div id="pageid">
-            <p>&#8550;</p>
+            <h2>Athens</h2>
+            <ul>
+                <li><a href="page-1.html">&#8544; Home</a></li>
+                <li><a href="page-2.html">&#8545; Tours</a></li>
+                <li><a href="page-3.html">&#8546; FAQ</a></li>
+                <li><a href="page-4.html">&#8547; Hotels</a></li>
+                <li><a href="page-5.html">&#8548; History</a></li>
+                <li><a href="page-6.html">&#8549; Register</a></li>
+                <li><a href="page-7.html">&#8550; Statement</a></li>
+            </ul>
         </div>
     </div>
+    
     <div class="content">
-
+        <header>
+            <h1>Discover Athens</h1>
+            <p>Experience the beauty and history of Athens through our exclusive video.</p>
+        </header>
+        
         <main>
-            <section id="about">
-                <div class="bkgrd">
-                    <h2> Registration Fourm</h2>
-                    <p>
-                    </p>
-                    <form action="">
-                        <br>
-                        <label for="firstName"> <b> Please enter your first name : </b> </label>
-                        <input type="text" name="firstName" id="firstName">
-                        <br> <br>
-                        <label for="lastName"> <b> Please enter your last name : </b> </label>
-                        <input type="text" name="lastName" id="lastName">
-                        <br> <br>
-
-                        <input type="checkbox" id="option1" name="option1" value="Bike">
-                        <label for="option1"> <b> Flight </b> </label><br>
-                        <input type="checkbox" id="option2" name="option2" value="Car">
-                        <label for="option2"> <b> Meals </b> </label><br>
-                        <input type="checkbox" id="option3" name="option3" value="Boat">
-                        <label for="option3"> <b> Suite </b></label> <br>
-                        <input type="checkbox" id="option4" name="option4" value="Bus">
-                        <label for="option4"> <b> Pool </b></label> <br>
-                        <input type="checkbox" id="option5" name="option5" value="2003NissanMurado">
-                        <label for="option5"> <b> Pet Room </b></label> <br>
-                        <br> <br>
-                        <label for="numPeople"> Please enter the amount of people who want to attend : </label>
-                        <select id="numPeople" name="numPeople">
-                            <option value="1" selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                        <br> <br>
-                        <label for="packageType"> Please enter the type of package you would like to have : </label>
-                        <select id="packageType" name="packageType">
-                            <option value="packageA" selected> packageA </option>
-                            <option value="packageB"> packageB </option>
-                            <option value="packageC"> packageC </option>
-                            <option value="packageD"> packageD </option>
-                        </select>
-                        <br> <br>
-                        <p> Include Airline Travel : </p>
-                        <input type="radio" id="airlineTravel" name="Y">
-                        <label for="Y"> Yes </label>
-                        <input type="radio" id="airlineTravel" name="N">
-                        <label for="N"> No </label>
-                        <br><br>
-                        <input type="submit" value="Process Request">
-                    </form>
+            <section id="video">
+                <div class="video-container">
+                    <video controls width="800">
+                        <source src="DABA7A24-6B4E-47E1-9C35-AB71E6F24FF0.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </section>
-
-
         </main>
-
+        
         <footer>
             <p>&copy; 2025 Athens Tour Guide. All Rights Reserved.</p>
         </footer>
     </div>
 </body>
-
 </html>

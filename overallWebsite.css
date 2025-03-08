@@ -35,77 +35,161 @@ html, body {
     width: 100%;
 }
 
+
 /* ==================================
-   SIDEBAR (BLUE COLOR SCHEME & BIGGER ROMAN NUMERALS)
+   IMPORT GOOGLE FONTS
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+/* ==================================
+   NAVBAR OVERRIDE (FORCES CONSISTENCY)
 ================================== */
 .sidebar {
-    width: 160px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, #1E3A8A, #3B82F6); /* Dark to light blue */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+    width: 300px !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: linear-gradient(to bottom, #1E3A8A, #3B82F6) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 20px !important;
+    z-index: 1000 !important;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2) !important;
 }
 
 .nav h2 {
-    font-size: 24px;
-    color: #E0F2FE;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    font-size: 2rem !important;
+    color: #E0F2FE !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
 }
 
 .nav ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    text-align: center;
+    list-style: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
 }
 
 .nav ul li {
-    margin: 15px 0;
+    margin: 10px 0 !important;
+    width: 100% !important;
 }
 
 .nav ul li a {
-    display: block;
-    font-size: 28px; /* Increased by 170% */
-    color: #E0F2FE; /* Light blue */
-    text-decoration: none;
-    padding: 12px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
+    display: block !important;
+    font-size: 1.5rem !important;
+    color: #E0F2FE !important;
+    text-decoration: none !important;
+    padding: 12px !important;
+    font-weight: bold !important;
+    transition: 0.3s ease-in-out !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
 }
 
 .nav ul li a:hover {
-    background: #60A5FA; /* Brighter blue hover effect */
-    color: #1E3A8A; /* Dark blue text */
-    border-radius: 8px;
+    background: #60A5FA !important;
+    color: #1E3A8A !important;
+    border-radius: 8px !important;
 }
 
 #pageid {
-    padding: 20px;
-    /*height: 100%;*/
-    
-    margin-bottom: 50%;
-    bottom:10px;   
-    position: absolute;
-    color: #1E3A8A;
+    padding: 20px !important;
+    bottom: 10px !important;
+    position: absolute !important;
+    color: #1E3A8A !important;
 }
 
+/* Override for different screen sizes */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px !important;
+    }
+    .nav ul li a {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px !important;
+    }
+    .nav ul li a {
+        font-size: 1.1rem !important;
+    }
+}
+
+
 /* ==================================
-   MAIN CONTENT
+   IMPORT GOOGLE FONTS
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* ==================================
+   ADJUSTED CONTENT FOR ALL PAGES
 ================================== */
 .content {
-    margin-left: 160px; /* Adjusted for sidebar width */
+    margin-left: 300px; /* Adjusted for new sidebar width */
     padding: 40px;
-    width: calc(100% - 160px); /* Ensures proper full-width layout */
+    width: calc(100% - 300px); /* Ensures proper full-width layout */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centers content properly */
+    max-width: calc(100vw - 320px); /* Prevents overflow */
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensures full-page coverage */
+    box-sizing: border-box;
 }
+
+/* Prevent content from extending off-page */
+.content > * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensures elements inside content do not overflow into the navbar */
+.content section {
+    max-width: 90%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px; /* Slightly smaller on medium screens */
+    }
+    .nav ul li a {
+        font-size: 1.3rem; /* Adjusted for better fit */
+    }
+    .content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        max-width: calc(100vw - 260px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduced further for small screens */
+    }
+    .nav ul li a {
+        font-size: 1.1rem; /* Prevents overflow on mobile */
+    }
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 20px;
+        max-width: calc(100vw - 210px);
+    }
+}
+
 
 /* ==================================
    HEADER SECTION (FANCY PADDING & ELEVATED DESIGN)
@@ -217,23 +301,90 @@ header p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 
-
-
-
+/* ==================================
+   IMPORT GOOGLE FONTS
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
 
 /* ==================================
-   FOOTER (FIXED AT BOTTOM)
+   ADJUSTED CONTENT FOR ALL PAGES
 ================================== */
-footer {
-    text-align: center;
-    background: black;
-    color: white;
-    padding: 15px;
+.content {
+    margin-left: 300px; /* Adjusted for new sidebar width */
+    padding: 40px;
+    width: calc(100% - 300px); /* Ensures proper full-width layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content properly */
+    max-width: calc(100vw - 320px); /* Prevents overflow */
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensures full-page coverage */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Prevent content from extending off-page */
+.content > * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensures elements inside content do not overflow into the navbar */
+.content section {
+    max-width: 90%;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+/* Ensures footer stays at the bottom even when content is short */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px; /* Slightly smaller on medium screens */
+    }
+    .nav ul li a {
+        font-size: 1.3rem; /* Adjusted for better fit */
+    }
+    .content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        max-width: calc(100vw - 260px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduced further for small screens */
+    }
+    .nav ul li a {
+        font-size: 1.1rem; /* Prevents overflow on mobile */
+    }
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 20px;
+        max-width: calc(100vw - 210px);
+    }
 }
 
 /* for  content of the webpage*/
@@ -926,3 +1077,105 @@ footer {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(17, 45, 102, 0.5));
     z-index: -1;
 }
+
+.hotel-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotel-card h3 {
+    font-size: 1.5rem; /* Make the text larger */
+    color: #333; /* Dark text color for readability */
+    margin-top: 10px; /* Ensure spacing above */
+    font-weight: bold; /* Make it bold */
+}
+
+.hotel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hotel-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    max-height: 200px; /* Prevents overly large images */
+    object-fit: cover;
+}
+
+.hotel-card p {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+.hotel-card button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hotel-card button:hover {
+    background-color: #005fa3;
+}
+
+#hotels h2 {
+    background-color: #005fa3; /* Deep blue background */
+    color: white; /* White text for contrast */
+    text-align: center;
+    font-size: 2rem;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    width: fit-content;
+    margin: 20px auto; /* Centers it */
+    letter-spacing: 1px; /* Modern text feel */
+    font-weight: bold;
+    text-transform: uppercase; /* Adds emphasis */
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+#hotels h2:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+html, body {
+    height: 100%; /* Ensures the full viewport is used */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll issues */
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the image covers the full screen */
+    width: 100vw; /* Ensures full width */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1; /* Ensures content stretches to push the footer down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
